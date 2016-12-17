@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{83162948-971E-43BF-99A4-D813911C1A2E}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>Content</ContentRootDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>SebLiRafASTEROIDSContent</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Art\Screens\GameOver\" />
+    <Folder Include="Assets\Sounds\Enemies\FinalBoss\" />
+    <Folder Include="Assets\Sounds\Enemies\PirateShip\" />
+    <Folder Include="Assets\Sounds\Neutron Gems\" />
+    <Folder Include="Assets\Sounds\Screens\Contracts\" />
+    <Folder Include="Assets\Sounds\Screens\GameOver\" />
+    <Folder Include="Assets\Sounds\Screens\Help\" />
+    <Folder Include="Assets\Sounds\Screens\License\" />
+    <Folder Include="Assets\Sounds\Screens\MainMenu\" />
+    <Folder Include="Assets\Sounds\Screens\Options\" />
+    <Folder Include="Assets\Sounds\Screens\OuterMap\" />
+    <Folder Include="Assets\Sounds\Screens\Pause\" />
+    <Folder Include="Assets\Sounds\Screens\Splash\" />
+    <Folder Include="Assets\Sounds\Screens\Workshop\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Player\spaceship-spritesheet.png">
+      <Name>spaceship-spritesheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Button\button.png">
+      <Name>button</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Button\button_hover.png">
+      <Name>button_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Button\button_pressed.png">
+      <Name>button_pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Pause\PauseBtnFont.spritefont">
+      <Name>PauseBtnFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Help\Font.spritefont">
+      <Name>Font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Help\screen_HelpMenu_Controls.png">
+      <Name>screen_HelpMenu_Controls</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Help\screen_HelpMenu_Enemies_Asteroids.png">
+      <Name>screen_HelpMenu_Enemies_Asteroids</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Help\screen_HelpMenu_Enemies_FinalBoss.png">
+      <Name>screen_HelpMenu_Enemies_FinalBoss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Help\screen_HelpMenu_Enemies_SpacePirates.png">
+      <Name>screen_HelpMenu_Enemies_SpacePirates</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Help\screen_HelpMenu_Goals.png">
+      <Name>screen_HelpMenu_Goals</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Help\screen_HelpMenu_Levels.png">
+      <Name>screen_HelpMenu_Levels</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Help\screen_HelpMenu.png">
+      <Name>screen_HelpMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Splash\screen_SplashScreen.png">
+      <Name>screen_SplashScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\MainMenu\MainMenu Background.png">
+      <Name>MainMenu Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\MainMenu\MainMenuBtnFont.spritefont">
+      <Name>MainMenuBtnFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Workshop\Workshop Background.png">
+      <Name>Workshop Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Workshop\Spaceships.png">
+      <Name>Spaceships</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Workshop\WorkshopBtnFont.spritefont">
+      <Name>WorkshopBtnFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Workshop\ShipStatsBlock.png">
+      <Name>ShipStatsBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Workshop\ShipSelected.png">
+      <Name>ShipSelected</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Workshop\StatLine.png">
+      <Name>StatLine</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Enemies\PirateShip\PirateShipOn.png">
+      <Name>PirateShipOn</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Enemies\PirateShip\PirateShipOff.png">
+      <Name>PirateShipOff</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Asteroids\asteroid_brown.png">
+      <Name>asteroid_brown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Asteroids\asteroid_grey.png">
+      <Name>asteroid_grey</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Asteroids\asteroid_grey_2.png">
+      <Name>asteroid_grey_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Enemies\PirateShip\PirateLaser.png">
+      <Name>PirateLaser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Player\ShipLaser.png">
+      <Name>ShipLaser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\License\screen_Licenses.png">
+      <Name>screen_Licenses</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Neutron Gems\neutron_gem_black.png">
+      <Name>neutron_gem_black</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Neutron Gems\neutron_gem_blue.png">
+      <Name>neutron_gem_blue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Neutron Gems\neutron_gem_green.png">
+      <Name>neutron_gem_green</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Neutron Gems\neutron_gem_lightblue.png">
+      <Name>neutron_gem_lightblue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Neutron Gems\neutron_gem_purple.png">
+      <Name>neutron_gem_purple</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Neutron Gems\neutron_gem_red.png">
+      <Name>neutron_gem_red</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Neutron Gems\neutron_gem_yellow.png">
+      <Name>neutron_gem_yellow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\OuterMap\Areios.png">
+      <Name>Areios</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Areios_inactive.png">
+      <Name>Areios_inactive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Areios_Background.png">
+      <Name>Areios_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Eloy_Background.png">
+      <Name>Eloy_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Hal_Background.png">
+      <Name>Hal_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Kapono_Background.png">
+      <Name>Kapono_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Kyriakos_Background.png">
+      <Name>Kyriakos_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Null Zone_Background.png">
+      <Name>Null Zone_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Padma_Background.png">
+      <Name>Padma_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Parvaiz_Background.png">
+      <Name>Parvaiz_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Eloy.png">
+      <Name>Eloy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Eloy_inactive.png">
+      <Name>Eloy_inactive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Hal.png">
+      <Name>Hal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Hal_inactive.png">
+      <Name>Hal_inactive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Kapono.png">
+      <Name>Kapono</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Kapono_inactive.png">
+      <Name>Kapono_inactive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Kyriakos.png">
+      <Name>Kyriakos</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Kyriakos_inactive.png">
+      <Name>Kyriakos_inactive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Null Zone.png">
+      <Name>Null Zone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Null Zone_inactive.png">
+      <Name>Null Zone_inactive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Padma.png">
+      <Name>Padma</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Padma_inactive.png">
+      <Name>Padma_inactive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Parvaiz.png">
+      <Name>Parvaiz</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\OuterMap\Parvaiz_inactive.png">
+      <Name>Parvaiz_inactive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\OuterMap\Outer_Map_Background.png">
+      <Name>Outer_Map_Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\OuterMap\OuterMapFont.spritefont">
+      <Name>OuterMapFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\OuterMap\OuterBtnFont.spritefont">
+      <Name>OuterBtnFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Contracts\screen_contract01.png">
+      <Name>screen_contract01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Contracts\screen_contract02.png">
+      <Name>screen_contract02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Contracts\screen_contract03.png">
+      <Name>screen_contract03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Contracts\screen_contract04.png">
+      <Name>screen_contract04</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Contracts\screen_contract05.png">
+      <Name>screen_contract05</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Contracts\screen_contract06.png">
+      <Name>screen_contract06</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Contracts\screen_contract07.png">
+      <Name>screen_contract07</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Contracts\screen_contract08.PNG">
+      <Name>screen_contract08</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Contracts\Font.spritefont">
+      <Name>Font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Enemies\FinalBoss\final_boss_phase1.png">
+      <Name>final_boss_phase1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Enemies\FinalBoss\final_boss_phase2.png">
+      <Name>final_boss_phase2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Enemies\FinalBoss\final_boss_phase3.png">
+      <Name>final_boss_phase3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Player\shield_state_active.png">
+      <Name>shield_state_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Player\shield_state_hit.png">
+      <Name>shield_state_hit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Enemies\FinalBoss\boss_laser.png">
+      <Name>boss_laser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Options\BackgroundOptions.png">
+      <Name>BackgroundOptions</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Options\ControlsDiagram.png">
+      <Name>ControlsDiagram</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Options\BtnFont.spritefont">
+      <Name>BtnFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Art\Screens\Level\laser_not_ready.png">
+      <Name>laser_not_ready</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Level\laser_ready.png">
+      <Name>laser_ready</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Art\Screens\Level\the_base_square.png">
+      <Name>the_base_square</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Sounds\Asteroids\Asteroid_Breaking.wav">
+      <Name>Asteroid_Breaking</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Sounds\Bullet\Laser_Fire.wav">
+      <Name>Laser_Fire</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Sounds\Player\Engine.wav">
+      <Name>Engine</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Sounds\Player\Thrusters.wav">
+      <Name>Thrusters</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Sounds\Button\Button_Click.wav">
+      <Name>Button_Click</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Sounds\Songs\Music_Background.mp3">
+      <Name>Music_Background</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Sounds\Songs\Music_FinalBoss.mp3">
+      <Name>Music_FinalBoss</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
